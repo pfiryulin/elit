@@ -38,21 +38,7 @@ class UserResourceController extends Controller
 
     }
 
-    /**
-     * Look for user
-     */
-    public function lookfor(Request $request){
-        $login = $request->query('login');
-        $pass = $request->query('password');
-        if($login != '' && $pass != ''){
-            $user = User::query();
-            $user = $user->where('phoneNumber', '=', $login);
-            return $user->get()->toJson();
-        }else{
-            return json_encode(['hello'],JSON_UNESCAPED_UNICODE);
-        }
-
-    }
+   
     /**
      * Store a newly created resource in storage.
      */

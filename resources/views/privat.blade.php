@@ -1,5 +1,5 @@
-@extends('layouts.app')
-    @section('content')
+{{-- @extends('layouts.app')
+    @section('content') --}}
         <header>
             <div class="page-wrapper">
                 <nav>
@@ -30,4 +30,4 @@
                 </section>
             </div>
         </main>
-    @endsection('content')
+    {{-- @endsection('content') --}}
