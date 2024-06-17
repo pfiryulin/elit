@@ -30,4 +30,5 @@ async function getData(el){
         console.log(request.status);
     }
 }
+alert(123);
 
