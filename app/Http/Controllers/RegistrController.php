@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Models\User;
-use Illuminate\Suport\Facades\Auth;
+// use App\Http\Models\User;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class RegistrController extends Controller
 {
@@ -13,13 +14,12 @@ class RegistrController extends Controller
         if(Auth::check()){
             return redirect(route('user.private'));
         }
-        $validateFields =$request->validate([
-            'phone' => 'required|numerick|between:11,11',
-            'password' => 'required|confirmed:repeatpassword',
-            'email' => 'email',
-            'name' => 'required|min:3',
+        $user = User::create([
+            'name' => $request->input('name'),
+            'login' => $request->input('login'),
+            'email' => $request->input('email'),
+            'password'=> bcrypt($request->input('password')),
         ]);
-        $user = User::create($validateFields);
         if($user){
             Auth::login($user);
             return redirect(route('user.private'));

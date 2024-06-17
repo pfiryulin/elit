@@ -16,7 +16,7 @@ use App\Http\Controllers\RegistrController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('login');
 });
 Route::post('user/check', [UserController::class, 'chekUser']);
 
