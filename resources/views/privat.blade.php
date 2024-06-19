@@ -7,7 +7,7 @@
                         <li><a href="#">Изменить данные</a></li>
                         <li><a href="#">Мои благодарности</a></li>
                         <li><a href="setthanks.html">Поблагадорить</a></li>
-                        <li><a href="loginform.html ">Выход</a></li>
+                        <li><a href="{{ route('user.logout') }}">Выход</a></li>
                     </ul>
                 </nav>
             </div>

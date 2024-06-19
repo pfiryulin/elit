@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegistrController;
+use App\Http\Controllers\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +30,11 @@ Route::name('user.')->group(function(){
         return view('login');
     })->name('login');
     // Route::post('/login',[]);
-    // Route::get('/loguout', [])->name('logout);
+    Route::get('/loguout', [LogoutController::class, 'logout'])->name('logout');
+
     Route::get('/registration',function(){
         return view('registration');
     })->name('registration');
+
     Route::post('/registration',[RegistrController::class, 'save']);
 });

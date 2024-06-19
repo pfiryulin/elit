@@ -22,9 +22,10 @@ class RegistrController extends Controller
         ]);
         if($user){
             Auth::login($user);
-            return json_encode(view('privat'));
+            // return response()->json(['html'=>view('privat')]);
+            return view('privat');
         }else{
-            return json_encode(view('login'))->withError([
+            return view('login')->withError([
                 'formError' => 'Что-то пошло не так.',
             ]);
         }

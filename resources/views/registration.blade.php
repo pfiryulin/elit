@@ -11,7 +11,7 @@
                 <input type="submit" value="Регистрация">
             </form>
             <div class="form__links">
-                <a href="{{ route('user.login') }}">Уже есть акаунт</a>
+                <a href="{{ route('user.login') }}" data-method="GET">Уже есть акаунт</a>
             </div>
         </div>
     @endsection('content')
