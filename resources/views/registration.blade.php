@@ -5,8 +5,8 @@
                 <input type="text" placeholder="ФИО" name="name">
                 <input type="text" placeholder="Телефон" name="login">
                 <input type="email" placeholder="E-mail" name="email">
-                <input type="password" name="password" id="" placeholder="Пароль">
-                <input type="password" name="repeatpassword" id="" placeholder="Повторите Пароль">
+                <input type="password" name="password" placeholder="Пароль">
+                <input type="password" name="repeatpassword" placeholder="Повторите Пароль">
                 @csrf
                 <input type="submit" value="Регистрация">
             </form>

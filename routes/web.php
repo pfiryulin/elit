@@ -25,7 +25,7 @@ Route::name('user.')->group(function(){
     Route::view('/privat', 'privat')->middleware('auth')->name('privat');
     Route::get('/login', function(){
         if(Auth::check()){
-            return redirect(route('user.privet'));
+            return view('privat');
         }
         return view('login');
     })->name('login');

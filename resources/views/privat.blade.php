@@ -1,5 +1,5 @@
-{{-- @extends('layouts.app')
-    @section('content') --}}
+@extends('layouts.app')
+    @section('content')
         <header>
             <div class="page-wrapper">
                 <nav>
@@ -7,7 +7,7 @@
                         <li><a href="#">Изменить данные</a></li>
                         <li><a href="#">Мои благодарности</a></li>
                         <li><a href="setthanks.html">Поблагадорить</a></li>
-                        <li><a href="{{ route('user.logout') }}">Выход</a></li>
+                        <li><a href="{{ route('user.logout') }}" data-method="GET">Выход</a></li>
                     </ul>
                 </nav>
             </div>
@@ -30,4 +30,4 @@
                 </section>
             </div>
         </main>
-    {{-- @endsection('content') --}}
+    @endsection('content')

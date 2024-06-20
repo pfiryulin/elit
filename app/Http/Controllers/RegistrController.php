@@ -12,7 +12,7 @@ class RegistrController extends Controller
 {
     public function save(Request $request){
         if(Auth::check()){
-            return redirect(route('user.privat'));
+            return view('privat');
         }
         $user = User::create([
             'name' => $request->input('name'),
